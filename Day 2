@@ -1,0 +1,112 @@
+seive(NW)
+
+
+
+        def seive(n):
+            arr = list(range(2,(n+1)))
+            p = 2
+            while(p*p<n):
+                if(arr[p-2]!=0):
+                    for i in range(p*p,n,p):
+                        arr[i-2]=0
+                p = p+1
+                for p in range(len(arr)-1):
+                    if(arr[p-2]!=0):
+                        print(arr[p-2],end = ' ')
+
+
+        seive(55)
+
+hello1
+hello1 hello2 hello3
+
+
+    n = int(input())
+    arr = []
+    while (n!=0):
+        arr.append(n%10)
+        n = int(n/10)
+
+    for i in range(len(arr)):
+        for j in range(arr[-(i+1)]):
+            print('Hello'+str(j+1),end=' ')
+        print()
+
+bus seat
+
+        def seatcheck(n):
+            m = int(n)%6
+            print(n)
+            if(m == 0 or m == 1 ):
+                print("window")
+            if(m == 2 or m == 5 ):
+                print("middle")
+            if(m == 3 or m == 4):
+                print("aisle")
+
+            print(int(n) + 6)
+
+        a = input()
+        b = input()
+
+        seatcheck(a)
+        seatcheck(b)
+
+
+
+
+
+palindrome(NW)
+
+
+
+    a = int(input())
+    b = a
+    arr = []
+
+    while(b != 0):
+        arr.append(b%10)
+        b = b/10
+    b = 0
+    for i in range(len(arr)):
+        b = b*10 + arr[i]
+
+    if(a==b):
+        print(" is a palindrome")
+    else:
+        print("not a palindrome")
+
+
+
+
+2nd largest element
+arr = [5,15,6,33,45]
+if(arr[0]>arr[1]):
+    max1= arr[0]
+    max2= arr[1]
+max1 = arr[1]
+max2 = arr[0]
+for i  in range(2,len(arr)):
+    if(arr[i]>max1 and arr[i]>max2):
+            max2 = max1
+            max1 = arr[i]
+    if(arr[i]>max2 and arr[i]<max1):
+        max2 = arr[i]
+
+print(max2)
+
+pattern
+12345
+ 2345
+  345
+   45
+    5
+    
+    
+n = 5
+for i in range(1,n):
+    for j in range(i-1):
+        print("",end=" ")
+    for j in range(i,n+1):
+        print(j,end='')
+    print('')
